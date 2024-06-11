@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch app.js"
+    "watch": "node --watch index.js"
   },
   "keywords": [],
   "author": "Melina Ocanto, Anahí Fernandez, Verónica Molinari, Federico Frontera",
