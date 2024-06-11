@@ -1,0 +1,16 @@
+{
+  "name": "back-end-biblioteca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "Melina Ocanto, Anahí Fernandez, Verónica Molinari, Federico Frontera",
+  "license": "MIT",
+  "description": "Back end de proyecto biblioteca node para el curso full stack con Node.js Codo a Codo 2024 - CRUD para API de Una biblioteca popular.",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
