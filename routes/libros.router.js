@@ -3,17 +3,19 @@ const router = express.Router();
 
 const controller = require('../controllers/libros.controller');
 
-//get listado libros
+//mostrar listado libros
 router.get('/', controller.index);
 
-//get libro
+//mostrar libro
 router.get('/', controller.show);
 
-//post libro
+//agregar libro
 router.post('/', controller.store);
 
-//put libro
+//modificar libro
 router.put('/', controller.update);
 
-//delete libro
+//eliminar libro
 router.delete('/', controller.destroy);
+
+module.exports = router;
