@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../estilos/estilos.css" />
+    <title>BiblioNode</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="barraNavegacion">
+        <a href="../index.html" class="linkLogo">
+          <img src="../img/logo.svg" alt="Logo de la biblioteca" class="logo" />
+        </a>
+
+        <form action="./listado.html" class="buscadorGrupo" id="buscador">
+          <input
+            type="text"
+            placeholder="Buscar"
+            name="inputBuscador"
+            class="buscador"
+            id="valorBuscado"
+            onkeypress="return event.keyCode !== 13;"
+          />
+          <button type="submit" class="botonBuscador">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <div class="menuResponsive" id="menuResponsive">
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div class="menu" id="menu">
+          <a href="../index.html#recomendaciones" class="botonSecundario"
+            >Recomendados</a
+          >
+          <a href="../index.html#sobreNosotros" class="botonSecundario"
+            >Sobre nosotros</a
+          >
+          <a href="../index.html#contacto" class="botonSecundario">Contacto</a>
+          <a href="./separte.html" class="botonPrimario">¡Quiero ser parte!</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="box">
+          <div id="card_box"></div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/listado.js" type="module"></script>
+    <script src="../js/menuResponsive.js"></script>
+  </body>
+</html>
