@@ -1,20 +1,20 @@
-require('dotenv').config();
+import { createPool } from 'mysql2/promise';
 
-const mysql = require('mysql2');
-
-const connection = mysql.createConnection({
+const pool = createPool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'ffrontera',
     password: process.env.DB_PWD || '3zcaw5FF#',
-    database: process.env.DB_NAME || 'biblioteca'
+    database: process.env.DB_NAME || 'biblioteca',
+    connectionLimit: 5
 });
 
-connection.connect((error)=> {
-    if(error) {
-        return console.log(error);
-    }
+pool.getConnection()
+    .then(connection => {
+        console.log('Connected to the database');
+        connection.release();
+    })
+    .catch(error => {
+        console.log('Errror connecting to the database ', error);
+    })
 
-    console.log('conectado a db');
-})
-
-module.exports = connection;
+export default pool;

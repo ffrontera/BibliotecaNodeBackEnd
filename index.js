@@ -1,14 +1,22 @@
-require('dotenv').config();
+import 'dotenv/config';
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from "url";
+import usersRouter from "./src/routes/users.router.js";
+import { authRouter } from "./src/routes/auth.router.js";
+import booksRouter from "./src/routes/books.router.js";
 
-const express = require('express');
+
 const app = express();
-const path = require('path');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use("/auth", require('./src/routes/auth.router'));
-app.use("/users", require('./src/routes/users.router'));
-app.use("/books", require('./src/routes/books.router'));
+app.use(express.urlencoded({ extended: true }));
+app.use("/auth", authRouter);
+app.use("/users", usersRouter);
+app.use("/books", booksRouter);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

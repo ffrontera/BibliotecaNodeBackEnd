@@ -1,10 +1,10 @@
-const db = require('../db/db');
+import pool from '../db/db.js';
 
 const show = (req, res) => {
     const {  } = req.params;
 
     const sql = 'SELECT * FROM usuarios WHERE = ?';
-    db.query(sql, [] ,(error, rows) => {
+    pool.query(sql, [] ,(error, rows) => {
         if (error) {
             console.log(error);
             return res.status(500).json({ error: 'intente mas tarde'});
@@ -29,7 +29,7 @@ const destroy = (req, res) => {
 
 };
 
-module.exports = {
+export {
     show,
     store,
     update,

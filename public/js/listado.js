@@ -32,7 +32,7 @@ fetch("../../books")
 
     const autorElement = document.createElement("p");
     autorElement.classList.add("left");
-    autorElement.textContent = `Autor: ${libro.id_autor}`;
+    autorElement.textContent = `Autor: ${libro.nombre}`;
 
     const generoElement = document.createElement("p");
     generoElement.classList.add("left");
@@ -55,7 +55,7 @@ fetch("../../books")
 
   document
     .getElementById("buscador")
-    .addEventListener("keyup", function (event) {
+    .addEventListener("submit", function (event) {
       
       const query = event.target.value.trim().toLowerCase();
       console.log(query);
@@ -77,7 +77,8 @@ fetch("../../books")
           libroElement.style.display = "block";
         }
       });
-    });
+    }
+  );
 })
 .catch((error) => {
   console.error("Error al cargar el archivo JSON:", error);

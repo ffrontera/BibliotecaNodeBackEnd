@@ -1,17 +1,14 @@
-const express = require('express');
-const router = express.Router();
-const controller = require('../controllers/users.controller');
+import { Router } from 'express';
+import { show, store, update, destroy } from '../controllers/users.controller.js';
 
-//traer usuario
-router.get('/', controller.show);
+const usersRouter = Router();
 
-//agregar usuario
-router.post('/', controller.store);
+usersRouter.get('/', show);
 
-//modificar usuario
-router.put('/', controller.update);
+usersRouter.post('/', store);
 
-//eliminar usuario (soft delete)
-router.delete('/', controller.destroy);
+usersRouter.put('/', update);
 
-module.exports = router;
+usersRouter.delete('/', destroy);
+
+export default usersRouter;
