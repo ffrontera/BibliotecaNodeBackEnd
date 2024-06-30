@@ -19,6 +19,5 @@ app.use("/users", usersRouter);
 app.use("/books", booksRouter);
 
 const IP = process.env.IP
-const DB_PORT = process.env.DB_PORT;
-
-app.listen(DB_PORT, () => console.log(`${IP}:${DB_PORT}`));
+const PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`${IP}:${PORT}`));
