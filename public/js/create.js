@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    fetch("../books", {
+    fetch("../../books", {
       method: "POST",
       body: data,
     })

@@ -6,18 +6,18 @@ form.addEventListener('submit', async (e) => {
   const title = document.getElementById('title').value.trim();
 
   try {
-    const response = await fetch(`/products/${encodeURIComponent(title)}`, {
+    const response = await fetch(`../../books/${encodeURIComponent(title)}`, {
       method: 'DELETE',
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.message || 'Error al eliminar el producto');
+      throw new Error(errorData.message || 'Error al eliminar libro');
     }
 
     const responseDiv = document.querySelector('#response');
 
-    responseDiv.innerHTML = '<p>Producto eliminado con éxito</p>';
+    responseDiv.innerHTML = '<p>Libro eliminado con éxito</p>';
     responseDiv.style.display = 'block';
 
     document.getElementById('title').value = '';
