@@ -1,0 +1,1081 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Comienzo de estilos de navbar */
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 65px;
+  width: 100%;
+  background-color: #151515;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+  max-width: 1272px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.linkLogo {
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+}
+
+.buscadorGrupo {
+  background-color: #eeeeee;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  align-items: center;
+}
+
+.buscador {
+  border: none;
+  background-color: #eeeeee;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #8b8b8b;
+}
+
+.botonBuscador {
+  border: none;
+}
+
+.menuResponsive {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.botonPrimario {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #fafafa;
+  padding: 8px 12px;
+  border-radius: 16px;
+}
+
+.botonSecundario {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 16px;
+}
+
+/* Fin de estilos de navbar */
+
+section {
+  width: 100%;
+  padding: 40px 40px 20px;
+  max-width: 1272px;
+  margin: auto;
+}
+
+/* Inicio de estilos de banner */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.titulo>span {
+  font-size: 80px;
+  font-weight: 800;
+  background: #2386c4;
+  background: linear-gradient(to right,
+      #2386c4 0%,
+      #5bb84d 25%,
+      #f2c12e 50%,
+      #f28729 75%,
+      #f23827 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitulo {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10%;
+  font-weight: 600;
+}
+
+.bannerImg {
+  padding: 0 5%;
+  width: 50%;
+}
+
+/* Fin de estilos de banner */
+
+/*--Recomendaciones--*/
+
+.recomendaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 750px;
+  background-image: url(../img/bibliotecafondo.jpeg);
+  background-size: cover;
+}
+
+.recomendaciones h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.proximamente {
+  margin-top: 20px;
+}
+
+.swiper {
+  width: 100%;
+  height: 260px;
+  padding: 5px;
+}
+
+.swiper-wrapper {
+  height: 220px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin-right: 20px;
+  border-left: 3px solid #000000;
+  border-radius: 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-top: 20px;
+  padding: 6px;
+  background: #2386c4;
+  background: linear-gradient(to right,
+      #2386c4 0%,
+      #5bb84d 25%,
+      #f2c12e 50%,
+      #f28729 75%,
+      #f23827 100%);
+}
+
+.imagen {
+  width: 500px;
+  height: 200px;
+  padding-left: 5px;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  height: 100%;
+}
+
+.informacion h4 {
+  margin: 10px 0;
+}
+
+.informacion p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 5px 8px;
+}
+
+.genero {
+  color: #2386c4;
+}
+
+.informacionButton {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  width: 120px;
+  position: fixed;
+  bottom: 10px;
+}
+
+.informacionLink {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+/*Sección de sobreNosotros*/
+
+.textoImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  width: 60%;
+}
+
+.texto {
+  width: 37%;
+  text-align: justify;
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+/*Contacto*/
+
+.contacto__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.8%;
+}
+
+.formulario {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr) 2fr repeat(2, 1fr);
+  grid-column-gap: 4%;
+  grid-row-gap: 1%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div5 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.div6 {
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+.div7 {
+  grid-area: 5 / 1 / 6 / 3;
+}
+
+.div8 {
+  grid-area: 6 / 1 / 7 / 3;
+}
+
+.div9 {
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+.div10 {
+  grid-area: 8 / 1 / 9 / 3;
+}
+
+.div11 {
+  grid-area: 9 / 1 / 10 / 3;
+}
+
+.div12 {
+  grid-area: 10 / 1 / 11 / 3;
+  text-align: end;
+}
+
+.div1,
+.div2,
+.div5,
+.div7,
+.div8,
+.div9,
+.div11 {
+  display: flex;
+  align-items: center;
+}
+
+.formulario label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"],
+.formularioRegistro input[type="checkbox"] {
+  display: none;
+}
+
+.vacio,
+.seleccionado {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.label_flex {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+input[type="radio"]+label .seleccionado,
+input[type="checkbox"]+label .seleccionado {
+  display: none;
+}
+
+input[type="radio"]+label .vacio,
+input[type="checkbox"]+label .vacio {
+  display: inline-flex;
+  align-items: center;
+  gap: 3%;
+}
+
+input[type="radio"]:checked+label .vacio,
+input[type="checkbox"]:checked+label .vacio {
+  display: none;
+}
+
+input[type="radio"]:checked+label .seleccionado,
+input[type="checkbox"]:checked+label .seleccionado {
+  display: inline-block;
+}
+
+.contacto__contenido input,
+.contacto__contenido textarea,
+.formularioRegistro input,
+select,
+.formularioIngreso input {
+  border: 0.5px solid #151515;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  resize: none;
+}
+
+.formularioRegistro select {
+  width: auto;
+}
+
+.contacto__contenido input[type="submit"],
+.divRegistro16 input[type="submit"],
+.divRegistro16 input[type="button"],
+.ingreso_formulario input[type="submit"],
+#botonRegistro,
+input[type="file"] {
+  width: auto;
+  background: none;
+}
+
+.contactoRedes {
+  border-right: 1px solid #151515;
+  border-left: 1px solid #151515;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.contactoRedes p {
+  margin: 2px 5px;
+}
+
+.contactoRedes span {
+  margin-top: 10px;
+}
+
+.negrita,
+.formulario label {
+  font-weight: bolder;
+}
+
+.contacto__contenido iframe {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  margin: 5px;
+  font-size: 20px;
+  color: #151515;
+}
+
+/*Listado*/
+.box {
+  width: 95%;
+  margin: auto;
+}
+
+#card_box {
+  margin: 10px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  perspective: 700;
+  -webkit-perspective: 700;
+}
+
+.libro {
+  margin: 20px;
+  width: 216px;
+  height: 340px;
+  position: relative;
+  background-color: gray;
+  transform-style: preserve-3d;
+  transition: 0.7s ease;
+}
+
+.libro h4,
+p {
+  margin: 5px;
+}
+
+.frente,
+.dorso {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.frente img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.dorso {
+  background-color: grey;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.dorso p {
+  font-size: 14px;
+}
+
+.dorso .resumen {
+  text-align: justify;
+}
+
+.dorso .left {
+  margin: 5px;
+  text-align: left;
+}
+
+.libro:hover {
+  transform: rotateY(180deg);
+}
+
+/*footer*/
+
+footer {
+  height: 80px;
+  background-color: #151515;
+}
+
+.footer {
+  display: flex;
+  max-width: 1272px;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.imgFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.logoFooter {
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.copyrigth{
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Comienzo de estilos de registro y login */
+
+.toggleRegistro {
+  cursor: pointer;
+}
+
+.toggleRegistro,
+.subirArchivo {
+  color: #F28729;
+  text-decoration: underline;
+}
+
+.registroLogin {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.contenedorPrincipal,
+.contenedorBanner {
+  width: 50%;
+}
+
+.contenedorPrincipal {
+  padding-right: 0;
+  padding-top: 40px;
+}
+
+.contenedorFormulario {
+  width: 100%;
+  display: flex;
+  column-gap: 2%;
+}
+
+.contenedorFormulario__formulario {
+  width: 100%;
+}
+
+.formularioRegistro {
+  width: 100%;
+  height: 68vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-column-gap: 4%;
+  grid-row-gap: 1%;
+}
+
+.divRegistro1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.divRegistro2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.divRegistro3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.divRegistro4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.divRegistro5 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.divRegistro6 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.divRegistro7 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.divRegistro8 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.divRegistro9 {
+  grid-area: 5 / 1 / 6 / 2;
+}
+
+.divRegistro10 {
+  grid-area: 5 / 2 / 6 / 3;
+}
+
+.divRegistro11 {
+  grid-area: 6 / 1 / 7 / 2;
+}
+
+.divRegistro12 {
+  grid-area: 6 / 2 / 7 / 3;
+}
+
+.divRegistro13 {
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+.divRegistro14 {
+  grid-area: 8 / 1 / 12 / 3;
+  border: dashed 1px #151515;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.divRegistro15 {
+  grid-area: 12 / 1 / 13 / 3;
+}
+
+.divRegistro16 {
+  grid-area: 13 / 1 / 14 / 3;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divRegistro1,
+.divRegistro2,
+.divRegistro5,
+.divRegistro6,
+.divRegistro9,
+.divRegistro10,
+.divRegistro14,
+.divRegistro16 {
+  display: flex;
+  text-align: center;
+}
+
+.divRegistro14 {
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.textoSubirArchivo {
+  display: inline;
+}
+
+.subirArchivo {
+  display: inline;
+}
+
+.subirArchivo:hover,
+.svgUpload {
+  cursor: pointer;
+}
+
+.formularioIngreso {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorOculto {
+  display: none;
+}
+
+.contenedorBanner {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bannerLateral {
+  width: 100%;
+  height: 100%;
+}
+
+.imagenBannerLateral {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  padding: 5px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.terminosCondiciones {
+  display: flex;
+}
+
+.terminosCondiciones a {
+  font-size: 15px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+}
+
+.botonRegistro {
+  font-size: 14px;
+  padding: 5px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+#botonRegistro,
+#botonIngresar {
+  color: #eeeeee;
+  background-color: #151515;
+}
+
+
+@media (min-width: 600px) and (max-width: 1200px) {
+
+  /*Recomendados*/
+  .recomendaciones {
+    height: 850px;
+  }
+
+  .swiper {
+    height: 320px;
+  }
+
+  .swiper-wrapper {
+    height: 270px;
+  }
+
+  .imagen {
+    width: 500px;
+    height: 200px;
+    padding-left: 5px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  /* Formulario registro */
+  
+  .formularioRegistro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 1%;
+    margin-top: 4%;
+    }
+    
+    .divRegistro1 { grid-area: 1 / 1 / 2 / 2; }
+    .divRegistro2 { grid-area: 1 / 2 / 2 / 3; }
+    .divRegistro3 { grid-area: 2 / 1 / 3 / 2; }
+    .divRegistro4 { grid-area: 2 / 2 / 3 / 3; }
+    .divRegistro5 { grid-area: 3 / 1 / 4 / 2; }
+    .divRegistro6 { grid-area: 3 / 2 / 4 / 3; }
+    .divRegistro7 { grid-area: 4 / 1 / 5 / 2; }
+    .divRegistro8 { grid-area: 4 / 2 / 5 / 3; }
+    .divRegistro9 { grid-area: 5 / 1 / 6 / 2; }
+    .divRegistro10 { grid-area: 5 / 2 / 6 / 3; }
+    .divRegistro11 { grid-area: 6 / 1 / 7 / 2; }
+    .divRegistro12 { grid-area: 6 / 2 / 7 / 3; }
+    .divRegistro13 { grid-area: 1 / 3 / 3 / 5; }
+    .divRegistro14 { grid-area: 3 / 3 / 4 / 5; }
+    .divRegistro15 { grid-area: 4 / 3 / 5 / 5; }
+    .divRegistro16 { 
+      grid-area: 5 / 3 / 7 / 5;
+      flex-direction: column;
+     }
+
+     .divRegistro1,
+     .divRegistro2,
+     .divRegistro5,
+     .divRegistro6,
+     .divRegistro9,
+     .divRegistro10 {
+      display: flex;
+      align-items: flex-end;
+     }
+
+    .contenedorBanner {
+      display: none;
+    }
+
+    .contenedorPrincipal {
+      width: 100%;
+    }
+
+    .textoSubirArchivo {
+      display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+  nav,
+  section,
+  .footer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  /*nav*/
+  .buscadorGrupo {
+    width: 65%;
+  }
+
+  .menuResponsive {
+    display: block;
+    margin: 5px;
+  }
+
+  .fa-book {
+    color: #fafafa;
+    padding: 4px;
+    font-size: 32px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuDesplegado {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50vw;
+    background-color: #151515;
+    overflow-y: hidden;
+    top: 50px;
+    right: 0px;
+    padding: 5px;
+    border-radius: 16px;
+  }
+
+  /*banner*/
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contenido {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .titulo>span {
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 10px;
+  }
+
+  .bannerImg {
+    padding: 0 10%;
+    width: 100%;
+  }
+
+  /*sobre nosotros*/
+
+  .textoImg {
+    display: block;
+  }
+
+  .texto {
+    width: 100%;
+  }
+
+  .img {
+    display: none;
+  }
+
+  /*contacto*/
+  .contacto__main {
+    display: block;
+  }
+
+  .contacto__contenido {
+    margin: 3% 0;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  /*Recomendados*/
+  .recomendaciones {
+    height: 850px;
+  }
+
+  .swiper {
+    height: 300px;
+  }
+
+  .swiper-wrapper {
+    height: 250px;
+  }
+
+  .imagen {
+    width: 500px;
+    height: 200px;
+    padding-left: 5px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+  }
+  .footer a {
+    display: none;
+  }
+
+  .desarrolladores {
+    font-size: 10px;
+  }
+
+  /* Registro login */
+
+  .formularioRegistro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 1%;
+  }
+
+  .divRegistro1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .divRegistro2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .divRegistro3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .divRegistro4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .divRegistro5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .divRegistro6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .divRegistro7 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .divRegistro8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+
+  .divRegistro9 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+
+  .divRegistro10 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+
+  .divRegistro11 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+
+  .divRegistro12 {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+
+  .divRegistro13 {
+    grid-area: 7 / 1 / 8 / 3;
+  }
+
+  .divRegistro14 {
+    grid-area: 8 / 1 / 11 / 3;
+  }
+
+  .divRegistro15 {
+    grid-area: 11 / 1 / 12 / 3;
+  }
+
+  .divRegistro16 {
+    grid-area: 12 / 1 / 14 / 3;
+    flex-direction: column;
+  }
+
+  .contenedorBanner {
+    display: none;
+  }
+
+  .contenedorPrincipal {
+    width: 100%;
+  }
+
+  .textoSubirArchivo {
+    display: none;
+  }
+}

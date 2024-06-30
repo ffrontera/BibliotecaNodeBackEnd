@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../estilos/estilos.css" />
+    <title>BiblioNode</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="barraNavegacion">
+        <a href="../index.html" class="linkLogo">
+          <img src="../img/logo.svg" alt="Logo de la biblioteca" class="logo" />
+        </a>
+
+        <form action="./listado.html" class="buscadorGrupo" id="buscador">
+          <input
+            type="text"
+            placeholder="Buscar"
+            name="inputBuscador"
+            class="buscador"
+            id="valorBuscado"
+          />
+          <button type="submit" class="botonBuscador">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <div class="menuResponsive" id="menuResponsive">
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div class="menu" id="menu">
+          <a href="../index.html#recomendaciones" class="botonSecundario"
+            >Recomendados</a
+          >
+          <a href="../index.html#sobreNosotros" class="botonSecundario"
+            >Sobre nosotros</a
+          >
+          <a href="../index.html#contacto" class="botonSecundario">Contacto</a>
+          <a href="../index.html" class="botonPrimario">Volver al inicio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="registroLogin">
+        <div class="contenedorPrincipal">
+          <div class="contenedorFormulario" id="contenedorRegistro">
+            <div class="contenedorFormulario__formulario">
+              <h1 class="seParteTitulo">Sé parte de la biblioteca</h1>
+              <p>
+                ¿Ya sos miembro?
+                <span id="toggleIniciosesion" class="toggleRegistro"
+                  >Iniciar sesión</span
+                >
+              </p>
+
+              <form
+                id="register"
+                enctype="multipart/form-data"
+                class="formularioRegistro"
+              >
+                <div class="divRegistro1">
+                  <label for="nombre" class="negrita">Nombre</label>
+                </div>
+                <div class="divRegistro2">
+                  <label for="email" class="negrita">Email</label>
+                </div>
+                <div class="divRegistro3">
+                  <input
+                    class="datos"
+                    type="text"
+                    placeholder="Nombre"
+                    name="nombre"
+                    id="nombre"
+                    autofocus
+                  />
+                </div>
+                <div class="divRegistro4">
+                  <input
+                    class="datos"
+                    type="text"
+                    id="mail"
+                    placeholder="Email"
+                    name="mail"
+                  />
+                </div>
+                <div class="divRegistro5">
+                  <label for="apellido" class="negrita">Apellido</label>
+                </div>
+                <div class="divRegistro6">
+                  <label for="contraseña" class="negrita">Contraseña</label>
+                </div>
+                <div class="divRegistro7">
+                  <input
+                    class="datos"
+                    type="text"
+                    id="apellido"
+                    placeholder="Apellido"
+                    name="apellido"
+                  />
+                </div>
+                <div class="divRegistro8">
+                  <input
+                    class="datos"
+                    type="password"
+                    id="pssword"
+                    placeholder="Contraseña"
+                    name="pssword"
+                  />
+                </div>
+                <div class="divRegistro9">
+                  <label for="telefono" class="negrita">Teléfono</label>
+                </div>
+                <div class="divRegistro10">
+                  <label for="contraseñaR" class="negrita"
+                    >Repetí la contraseña</label
+                  >
+                </div>
+                <div class="divRegistro11">
+                  <input
+                    class="datos"
+                    type="text"
+                    id="tel"
+                    placeholder="Teléfono"
+                    name="tel"
+                  />
+                </div>
+                <div class="divRegistro12">
+                  <input
+                    class="datos"
+                    type="password"
+                    placeholder="Repetí la contraseña"
+                    name="contraseña-r"
+                    id="contraseñaR"
+                  />
+                </div>
+                <!--<div class="divRegistro13">
+                                <p class="info negrita">Frente y dorso del documento</p>
+                                <p class="info">Necesitamos esta información para adjuntarla a tu ficha de asociado.</p>
+                            </div>
+                            <div class="divRegistro14">
+                                <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+                                    <label for="fotoDni">
+                                        <svg class="svgUpload" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                                stroke="#F28729" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M17 8L12 3L7 8" stroke="#F28729" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M12 3V15" stroke="#F28729" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <br>
+                                        <span class="info textoSubirArchivo">Arrastrá y soltá los documentos a este
+                                            recuadro
+                                            para subirlos a la web o </span>
+                                        <span class="subirArchivo">Buscalos en tu equipo</span>
+                                        <input class="info" type="file" id="fotoDni" name="fotoDni"
+                                            accept="image/png, image/jpeg" multiple />
+                                    </label>
+                                    <div class="vistaPrevia">
+
+                                    </div>
+                                </div>
+                            </div>-->
+                <div class="divRegistro15">
+                  <div class="terminosCondiciones">
+                    <input type="checkbox" id="terminos" name="terminos" />
+                    <label for="terminos" class="label_flex">
+                      <i class="seleccionado">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 11L12 14L22 4"
+                            stroke="currentcolor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+                            stroke="currentcolor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </i>
+                      <i class="vacio">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="3"
+                            stroke="currentcolor"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </i>
+                      <span
+                        >Por favor, aceptá nuestros
+                        <a href="../imgBD/terminosycondiciones.txt" download
+                          >términos y condiciones de registro</a
+                        >.</span
+                      >
+                    </label>
+                  </div>
+                </div>
+                <div class="divRegistro16">
+                  <label for="suscripcion"
+                    >Desea recibir información por email?
+                    <select name="suscripcion" id="suscripcion">
+                      <option value="true">Si</option>
+                      <option value="false">No</option>
+                    </select>
+                  </label>
+                  <div class="botones">
+                    <input type="submit" value="Registrarme" />
+                    <input type="button" value="Ingresar!" id="botonIngresar" />
+                  </div>
+                  <div id="response"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div
+            class="contenedorOculto contenedorFormulario"
+            id="contenedorInicioSesion"
+          >
+            <div>
+              <h1 class="seParteTitulo">Inicia sesión</h1>
+              <p>
+                ¿Todavía no sos parte?
+                <span id="toggleRegistro" class="toggleRegistro"
+                  >Registrate</span
+                >
+              </p>
+              <div class="ingreso_formulario">
+                <form id="login" class="formularioIngreso">
+                  <label for="mail">Email</label>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail_l"
+                    class="item_formulario_ingreso"
+                  />
+                  <label for="contraseniaIngreso">Contraseña</label>
+                  <input
+                    type="password"
+                    name="pssword"
+                    id="password_l"
+                    class="item_formulario_ingreso"
+                  />
+                  <p>
+                    Olvide mi <a href="" class="toggleRegistro">contraseña</a>
+                  </p>
+                  <div class="botones">
+                    <input type="submit" value="Ingresar" />
+                    <input
+                      type="button"
+                      value="Registrate"
+                      id="botonRegistro"
+                    />
+                  </div>
+                  <div id="response"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedorBanner">
+          <div class="bannerLateral">
+            <img
+              src="../img/escritorioconlibros.jpg"
+              class="imagenBannerLateral"
+              alt="Imagen tomada desde arriba donde se observa una mesa o escritorio con libros y una persona leyendo"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/menuResponsive.js"></script>
+    <!-- <script src="../js/register.js"></script> -->
+    <!-- <script src="../js/login.js"></script> -->
+    <script src="../js/mostrarOcultar.js"></script>
+    <!--<script src="../js/soltarArchivo.js"></script>-->
+    <script src="../js/validacionIngreso.js"></script>
+  </body>
+</html>
