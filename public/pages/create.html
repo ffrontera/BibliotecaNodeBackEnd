@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../estilos/estilos.css" />
+  <title>BiblioNode</title>
+</head>
+
+<body>
+  <header>
+    <nav class="barraNavegacion">
+      <div class="navRow">
+        <a href="../pages/admin.html" class="linkLogo">
+          <img src="../img/logo.svg" alt="Logo de la biblioteca" class="logo" />
+        </a>
+        <div>
+          <h2 class="navTitle">Biblioteca Popular Alfonsina Storni</h2>
+          <h3 class="navSubTitle">Sistema de gestión</h2>
+        </div>
+      </div>
+      <div>
+        <img src="../img/logout.png" alt="salir" id="salir" class="logoutButton" />
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="adminContainer">
+      <div class="adminMenu">
+        <h1 class="titulo">Agregar un libro</h1>
+        <form id="create" enctype="multipart/form-data" class="formularioCrearLibro">
+          <fieldset>
+
+            <div class="fila">
+              <div>
+                <label for="titulo">Título</label>
+                <input type="text" name="titulo" id="titulo" />
+              </div>
+              <div>
+                <label for="id_autor">ID Autor</label>
+                <input type="number" name="id_autor" id="id_autor" />
+              </div>
+            </div>
+
+            <div class="fila">
+              <div>
+                <label for="ISBN">ISBN</label>
+                <input type="number" name="ISBN" id="ISBN" />
+              </div>
+              <div>
+                <label for="genero">Género</label>
+                <input type="text" name="genero" id="genero" />
+              </div>
+            </div>
+
+            <div class="fila">
+              <div>
+                <label for="resumen">Resumen</label>
+                <input type="text" name="resumen" id="resumen" />
+              </div>
+              <div>
+                <label for="tapa">Imagen de la tapa</label>
+                <input type="file" name="tapa" id="tapa" />
+              </div>
+            </div>
+
+            <div id="response"></div>
+            <div class="fila">
+              <button type="submit" class="button">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" />
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <a href="../pages/admin.html" class="linkLogo logoFooter">
+        <img class="imgFooter logo" src="../img/logo.svg" alt="Logo de la biblioteca" />
+      </a>
+      <div class="copyrigth">
+        <p class="grupo negrita">
+          © 2024 Grupo 14 - Comision 24130 - Codo a codo full Stack Node.js
+        </p>
+        <p class="desarrolladores">
+          Anahí Fernandez - Verónica Molinari - Melina Ocanto - Federico
+          Frontera
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/create.js" type="module"></script>
+  <script src="../js/logout.js"></script>
+</body>
+
+</html>

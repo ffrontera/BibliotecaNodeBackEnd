@@ -87,6 +87,30 @@ nav {
   font-size: 16px;
 }
 
+.navRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.navTitle {
+  color: #fff;
+  font-size: 22px;
+  
+}
+
+.navSubTitle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  
+}
+
+.logoutButton {
+  height: 40px;
+}
+
 /* Fin de estilos de navbar */
 
 section {
@@ -233,7 +257,7 @@ section {
   color: #2386c4;
 }
 
-.informacionButton {
+.informacionBoton {
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 20px;
@@ -707,23 +731,6 @@ footer {
   align-items: center;
 }
 
-input[type="file"] {
-  display: none;
-}
-
-.textoSubirArchivo {
-  display: inline;
-}
-
-.subirArchivo {
-  display: inline;
-}
-
-.subirArchivo:hover,
-.svgUpload {
-  cursor: pointer;
-}
-
 .formularioIngreso {
   display: flex;
   flex-direction: column;
@@ -1078,4 +1085,94 @@ input[type="file"] {
   .textoSubirArchivo {
     display: none;
   }
+}
+
+
+  /* Vista de admin */
+
+.adminContainer {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 2%;
+}
+
+.adminMenu {
+  padding: 20px;
+  width: 50%;
+  height: 70%;
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+
+.adminMenu > .titulo {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.adminMenu > .subtitulo {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.button {
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #151515;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 25%;
+}
+
+.adminImg {
+  width: 50%;
+}
+
+.adminLink {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.formularioCrearLibro{
+  width: 100%;
+  display: flex;
+}
+
+.formularioCrearLibro > fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.fila {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.fila > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.fila > div > input {
+  border: 0.5px solid #151515;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 36px;
+  font-size: 16px;
+  resize: none;
 }

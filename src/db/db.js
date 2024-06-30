@@ -1,10 +1,10 @@
 import { createPool } from 'mysql2/promise';
 
 const pool = createPool({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'ffrontera',
-    password: process.env.DB_PWD || '3zcaw5FF#',
-    database: process.env.DB_NAME || 'biblioteca',
+    host: process.env.IP,
+    user: process.env.DB_USER,
+    password: process.env.DB_PWD,
+    database: process.env.DB_NAME,
     connectionLimit: 5
 });
 

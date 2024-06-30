@@ -1,4 +1,3 @@
-import { log } from 'console';
 import pool from '../db/db.js';
 import { unlinkSync } from 'fs';
 import path from 'path';
