@@ -18,5 +18,6 @@ app.use("/auth", authRouter);
 app.use("/users", usersRouter);
 app.use("/books", booksRouter);
 
+const IP = process.env.IP
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`${IP}:${PORT}`));
