@@ -18,7 +18,7 @@ const index = async (req, res) => {
         res.json(rows);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'Ocurrió un problema, intente mas tarde' })
+        res.status(500).json({ error: error })
     }
 };
 
