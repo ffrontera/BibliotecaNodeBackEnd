@@ -55,7 +55,7 @@ fetch("../../books")
 
   document
     .getElementById("buscador")
-    .addEventListener("submit", function (event) {
+    .addEventListener("keyUp", function (event) {
       
       const query = event.target.value.trim().toLowerCase();
       console.log(query);
