@@ -31,7 +31,7 @@ const show = async (req, res) => {
     WHERE titulo LIKE "%"?"%"`;
     try {
         const connection = await pool.getConnection();
-        const [rows] = await connection.query(sql, [titulo.trim().replaceAll('+', ' ')]);
+        const [rows] = await connection.query(sql, [titulo.trim().replaceAll('%20', ' ')]);
         res.status(200).json(rows);
     } catch (error) {
 

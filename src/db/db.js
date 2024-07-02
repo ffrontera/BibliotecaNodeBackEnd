@@ -5,7 +5,7 @@ const pool = createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PWD,
     database: process.env.DB_NAME,
-    connectionLimit: 5
+    connectionLimit: 20
 });
 
 pool.getConnection()

@@ -1,4 +1,4 @@
 document.getElementById('buscador').onsubmit = function () {
-    window.location = 'listado.html?u=' + document.getElementById('valorBuscado').value;
+    window.location = './pages/listado.html?titulo=' + document.getElementById('valorBuscado').value;
     return false;
   }

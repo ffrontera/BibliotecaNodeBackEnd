@@ -26,7 +26,7 @@ form.addEventListener('submit', async (e) => {
     }
 
     const responseDiv = document.querySelector('#response');
-    responseDiv.innerHTML = '<p>Producto actualizado con éxito</p>';
+    responseDiv.innerHTML = '<p>Libro actualizado con éxito</p>';
     responseDiv.style.display = 'block';
     document.getElementById('title').value = '';
     document.getElementById('stock').value = '';
