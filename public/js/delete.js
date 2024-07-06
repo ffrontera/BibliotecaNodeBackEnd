@@ -2,12 +2,13 @@ const form = document.querySelector('#delete');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
-  const title = document.getElementById('title').value.trim();
-
   try {
-    const response = await fetch(`../../books/${encodeURIComponent(title)}`, {
+    const response = await fetch(`../../books/${sessionStorage.getItem('id')}`, {
       method: 'DELETE',
+      headers: {
+        contentType: 'application/json',
+        'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+     },
     });
 
     if (!response.ok) {

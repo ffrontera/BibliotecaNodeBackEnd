@@ -17,6 +17,7 @@ form.addEventListener('submit', async (e) => {
       body: queryParams,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': 'Bearer <token>'
       },
     });
 

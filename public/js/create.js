@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("../../books", {
       method: "POST",
       body: data,
+      headers: {
+        contentType: 'application/json',
+        'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+     },
     })
       .then((res) => res.json())
       .then((data) => {

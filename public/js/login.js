@@ -18,6 +18,10 @@
       });
       console.log(response)
       const responseData = await response.json();
+
+      let token = responseData.token;
+      sessionStorage.setItem('token', token);
+
       const responseDiv = document.querySelector("#response");
       // if (response.ok) {
       //   if (responseData.isAdmin) {

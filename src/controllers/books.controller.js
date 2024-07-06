@@ -41,6 +41,9 @@ const show = async (req, res) => {
 const store = async (req, res) => {
     const { filename } = req.file;
     const { titulo, id_autor, genero, resumen, ISBN } = req.body;
+    if(!req.isAdmin) {
+        return res.status(403).json({ message: 'No tiene autorizacion para realizar esta tarea ' })
+    }
     const tapa = '../uploads/' + filename;
     const sql = 'INSERT INTO libros (titulo, id_autor, genero, tapa, resumen, ISBN) VALUES (?, ?, ?, ?, ?, ?)';
     try {
@@ -57,11 +60,17 @@ const store = async (req, res) => {
 
 //put libro
 const update = (req, res) => {
+    if(!req.isAdmin) {
+        return res.status(403).json({ message: 'No tiene autorizacion para realizar esta tarea ' })
+    }
 
 };
 
 const destroy = async (req, res) => {
     const { id } = req.params;
+    if(!req.isAdmin) {
+        return res.status(403).json({ message: 'No tiene autorizacion para realizar esta tarea ' })
+    }
     const sqlFind = 'SELECT tapa FROM libros WHERE id = ?'
     const sqlDelete = 'DELETE FROM libros WHERE id = ?';
     try {

@@ -36,25 +36,43 @@
     </header>
     <main>
         <section class="adminContainer">
-            <div class="adminMenu">
-                <h1 class="titulo">Eliminar un libro</h1>
-                <form id="delete" class="formularioCrearLibro">
-                    <fieldset>
-
-                        <div class="fila">
-                            <div>
-                                <label for="title">Título</label>
-                                <input type="text" name="title" id="title">
+            <div>
+                <div class="navegador">
+                    <a href="../pages/admin.html" class="navegadorLink">Inicio</a>
+                    <p class="navegadorActual">/ Eliminar producto</p>
+                </div>
+                <div class="adminMenu">
+                    <h1 class="titulo">Eliminar un libro</h1>
+                    <form id="update" class="formularioCrearLibro">
+                        <fieldset>
+                            <div class="fila">
+                                <div>
+                                    <label for="searchData">Ingresá el libro a eliminar:</label>
+                                    <input type="text" name="searchData" placeholder="Buscar por título"
+                                        id="searchData">
+                                </div>
+                                <button type="button" id="search" class="button">Buscar libro</button>
                             </div>
-                        </div>
+                        </fieldset>
+                    </form>
+                    <form id="delete" class="formularioCrearLibro">
+                        <fieldset>
 
-                        <div id="response"></div>
-                        <br>
-                        <div class="fila">
-                            <button type="submit" class="button">Eliminar</button>
-                        </div>
-                    </fieldset>
-                </form>
+                            <div class="fila">
+                                <div>
+                                    <label for="title">Título</label>
+                                    <input type="text" name="title" id="titulo">
+                                </div>
+                            </div>
+
+                            <div id="response"></div>
+                            <br>
+                            <div class="fila">
+                                <button type="submit" class="button">Eliminar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
 
             <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" />
@@ -78,6 +96,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/buscarLibroAdmin.js" type="module"></script>
     <script src="../js/delete.js" type="module"></script>
     <script src="../js/logout.js"></script>
 </body>

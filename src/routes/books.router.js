@@ -7,6 +7,7 @@ import { Router } from "express";
 import multer from "multer";
 import path from "path";
 import { fileURLToPath } from "url";
+import middleware from '../middelewares/auth.middleware.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,8 +40,8 @@ const upload = multer({
 
 booksRouter.get('/', index);
 booksRouter.get('/:titulo', show);
-booksRouter.post('/', upload.single('tapa'),store);
-booksRouter.put('/:id', upload.single('tapa'), update);
-booksRouter.delete('/:id', destroy);
+booksRouter.post('/', middleware, upload.single('tapa'), store);
+booksRouter.put('/:id', middleware, upload.single('tapa'), update);
+booksRouter.delete('/:id', middleware, destroy);
 
 export default booksRouter;

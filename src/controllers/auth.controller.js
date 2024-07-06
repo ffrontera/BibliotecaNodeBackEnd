@@ -16,12 +16,11 @@ export const register = async (req, res) => {
         const [rows] = await connection.query(sql, [user]);
         let newUser = await connection.query('select * from users where mail = ?', [mail]);
         connection.release();
-        const token = jwt.sign({ id: newUser.id }, process.env.SECRET_KEY || '123456', {
+        const token = jwt.sign({ id: newUser.id }, process.env.SECRET_KEY, {
             expiresIn: "1h",
         });
         res.status(201).json({ auth: true, token });
     } catch (error) {
-        console.log(error);
         if (error.errno == 1062)
             res.status(400).json({ message: 'Error, el e-mail ya se encuentra registrado' });
         else
@@ -41,7 +40,7 @@ export const login = async (req, res) => {
         if (!valid) {
             return res.status(401).json({ auth: false, token: null, message: 'Incorrect password' });
         }
-        const token = jwt.sign({ id: user.id, admin: user.rol === 'admin' }, process.env.SECRET_KEY || '123456', {
+        const token = jwt.sign({ id: user.id, admin: user.rol === 'admin' }, process.env.SECRET_KEY, {
             expiresIn: "1h",
         });
         res.json({ auth: true, token, message: 'bienvenido ' + user.nombre });
