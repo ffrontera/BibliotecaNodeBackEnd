@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const responseDiv = document.querySelector("#response");
             if (response.ok) {
                 alert("Usuario registrado con éxito");
+                let token = responseData.token;
+                sessionStorage.setItem('token', token);
             } else {
                 responseDiv.innerHTML = `<p>${responseData.message}</p>`;
                 responseDiv.style.display = "block";

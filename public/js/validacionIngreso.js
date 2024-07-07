@@ -31,11 +31,12 @@ const validarIngreso = formIngreso.addEventListener("submit", async (event) => {
             },
             body: JSON.stringify(data),
         });
-        const responseData = response.json();
+        const responseData = await response.json();
         const responseDiv = document.querySelector("#response");
         if (response.ok) {
+            sessionStorage.setItem('token', responseData.token)
             // if (responseData.isAdmin) {
-            window.location.href = "listado.html";
+            // window.location.href = "listado.html";
             // responseDiv.innerHTML= `<p>Acceso no autorizado para su rol.</p>`;
             // }
         } else {

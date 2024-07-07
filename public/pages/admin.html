@@ -39,15 +39,30 @@
     <section class="adminContainer">
       <div class="adminMenu">
         <h1 class="titulo">¡Te damos la bienvenida!</h1>
-        <h2 class="subtitulo">Nuestros Productos</h2>
+        <h2 class="subtitulo">Libros</h2>
         <div class="buttons">
           <a href="create.html" id="crearProducto" class="button">Ingresar</a>
-          <a href="update.html" id="modificarProducto" class="button">Modificar</a>
-          <a href="delete.html" id="eliminarProducto" class="button">Eliminar</a>
+          <a href="update_delete.html" id="modificarProducto" class="button">Modificar/Eliminar</a>
+        </div>
+        <h2 class="subtitulo">Autores</h2>
+        <div class="buttons">
+          <a href="createAutor.html" id="crearAutor" class="button">Ingresar</a>
+          <a href="update_deleteAutor.html" id="modificarAutor" class="button">Modificar/Eliminar</a>
+        </div>
+        <h2 class="subtitulo">Ejemplares</h2>
+        <div class="buttons">
+          <a href="createEjemplar.html" id="crearEjemplar" class="button">Ingresar</a>
+          <a href="update_deleteEjemplar.html" id="modificarEjemplar" class="button">Modificar/Eliminar</a>
+        </div>
+        <h2 class="subtitulo">Prestamos</h2>
+        <div class="buttons">
+          <a href="createPrestamo.html" id="crearAutor" class="button">Ingresar</a>
+          <a href="updatePrestamo.html" id="modificarAutor" class="button">Devolución</a>
         </div>
       </div>
 
-      <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" />
+      <div id="libros-container"></div>
+      <!-- <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" /> -->
 
     </section>
 
@@ -69,7 +84,7 @@
     </div>
   </footer>
   <script src="../js/scripts.js" type="module"></script>
-  <script src="../js/logout.js"></script>
+  <!-- <script src="../js/logout.js"></script> -->
 </body>
 
 </html>

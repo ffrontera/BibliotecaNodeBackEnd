@@ -37,53 +37,59 @@
 
   <main>
     <section class="adminContainer">
-      <div class="adminMenu">
-        <h1 class="titulo">Agregar un libro</h1>
-        <form id="create" enctype="multipart/form-data" class="formularioCrearLibro">
-          <fieldset>
+      <div>
+        <div class="navegador">
+          <a href="../pages/admin.html" class="navegadorLink">Inicio</a>
+          <p class="navegadorActual">/ Nuevo libro</p>
+        </div>
+        <div class="adminMenu">
+          <h1 class="titulo">Agregar un libro</h1>
+          <form id="create" enctype="multipart/form-data" class="formularioCrearLibro">
+            <fieldset>
 
-            <div class="fila">
-              <div>
-                <label for="titulo">Título</label>
-                <input type="text" name="titulo" id="titulo" />
+              <div class="fila">
+                <div>
+                  <label for="titulo">Título</label>
+                  <input type="text" name="titulo" id="titulo" />
+                </div>
+                <div>
+                  <label for="id_autor">ID Autor</label>
+                  <input type="number" name="id_autor" id="id_autor" />
+                </div>
               </div>
-              <div>
-                <label for="id_autor">ID Autor</label>
-                <input type="number" name="id_autor" id="id_autor" />
-              </div>
-            </div>
 
-            <div class="fila">
-              <div>
-                <label for="ISBN">ISBN</label>
-                <input type="number" name="ISBN" id="ISBN" />
+              <div class="fila">
+                <div>
+                  <label for="ISBN">ISBN</label>
+                  <input type="number" name="ISBN" id="ISBN" />
+                </div>
+                <div>
+                  <label for="genero">Género</label>
+                  <input type="text" name="genero" id="genero" />
+                </div>
               </div>
-              <div>
-                <label for="genero">Género</label>
-                <input type="text" name="genero" id="genero" />
-              </div>
-            </div>
 
-            <div class="fila">
-              <div>
-                <label for="resumen">Resumen</label>
-                <input type="text" name="resumen" id="resumen" />
+              <div class="fila">
+                <div>
+                  <label for="resumen">Resumen</label>
+                  <input type="text" name="resumen" id="resumen" />
+                </div>
+                <div>
+                  <label for="tapa">Imagen de la tapa</label>
+                  <input type="file" name="tapa" id="tapa" accept="image/*" />
+                </div>
               </div>
-              <div>
-                <label for="tapa">Imagen de la tapa</label>
-                <input type="file" name="tapa" id="tapa" />
-              </div>
-            </div>
 
-            <div id="response"></div>
-            <div class="fila">
-              <button type="submit" class="button">Enviar</button>
-            </div>
-          </fieldset>
-        </form>
+              <div id="response"></div>
+              <div class="fila">
+                <button type="submit" class="button">Enviar</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
-
-      <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" />
+      <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" id="imagenLibroNull"/>
+      <img alt="Tapa libro" class="adminImg" id="tapaLibroPrevisializacion" max-wid=""/>
     </section>
   </main>
 

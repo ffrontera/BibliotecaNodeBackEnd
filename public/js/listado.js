@@ -5,10 +5,9 @@ const urlParam = new URLSearchParams(params);
 if (urlParam.get('titulo') != null) {
   tituloBuscado += urlParam.get('titulo');
 }
-console.log(tituloBuscado);
 
-
-fetch("../../books" + (tituloBuscado === '/' ? '' : '/',tituloBuscado))
+fetch("../../books" + (tituloBuscado === '/' ? '' : '/',tituloBuscado), {
+  headers: {Authorization: ('Bearer ', sessionStorage.getItem('token'))}})
   .then((response) => response.json())
   .then((data) => {
     const librosContainer = document.getElementById("card_box");
@@ -63,8 +62,10 @@ fetch("../../books" + (tituloBuscado === '/' ? '' : '/',tituloBuscado))
       librosMostrados.push(libro);
     });
 
+
+    
     document
-      .getElementById("buscador")
+      .getElementById("valorBuscado")
       .addEventListener("keyUp", function (event) {
 
         const query = event.target.value.trim().toLowerCase();
