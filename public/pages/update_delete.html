@@ -39,47 +39,77 @@
             <div>
                 <div class="navegador">
                     <a href="../pages/admin.html" class="navegadorLink">Inicio</a>
-                    <p class="navegadorActual">/ Eliminar producto</p>
+                    <p class="navegadorActual">/ Modificar-Eliminar Libro</p>
                 </div>
                 <div class="adminMenu">
-                    <h1 class="titulo">Eliminar un libro</h1>
                     <form id="update" class="formularioCrearLibro">
                         <fieldset>
                             <div class="fila">
                                 <div>
-                                    <label for="searchData">Ingresá el libro a eliminar:</label>
-                                    <input type="text" name="searchData" placeholder="Buscar por título"
-                                        id="searchData">
+                                    <label for="id">Id</label>
+                                    <input type="number" name="id" placeholder="234" id="id">
                                 </div>
-                                <button type="button" id="search" class="button">Buscar libro</button>
+                                <div>
+                                    <label for="ISBN">ISBN</label>
+                                    <input type="number" name="ISBN" id="ISBN" placeholder="934583472384">
+                                </div>
                             </div>
-                        </fieldset>
-                    </form>
-                    <form id="delete" class="formularioCrearLibro">
-                        <fieldset>
-
                             <div class="fila">
                                 <div>
-                                    <label for="title">Título</label>
-                                    <input type="text" name="title" id="titulo">
+                                    <label for="titulo">Título</label>
+                                    <input type="text" name="titulo" id="titulo" placeholder="principito">
                                 </div>
                             </div>
-
+                            <div class="fila">
+                                <div>
+                                    <label for="resumen">Resumen</label>
+                                    <input type="text" name="resumen" id="resumen">
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div>
+                                    <label for="id_autor">Autor</label>
+                                    <input type="text" name="id_autor" id="id_autor" placeholder="Antoine">
+                                </div>
+                                <div>
+                                    <label for="genero">Género</label>
+                                    <input type="text" name="genero" id="genero" placeholder="Infantil">
+                                </div>
+                            </div>
                             <div id="response"></div>
                             <br>
+                            <div class="fila buscar">
+                                <button type="button" id="searchButton" class="button">Buscar libro</button>
+                            </div>
+                            <div class="fila acciones">
+                                <button type="submit" class="button" id="submit">Modificar</button>
+                                <button type="button" class="button" id="delButtom">Eliminar</button>
+                            </div>
                             <div class="fila">
-                                <button type="submit" class="button">Eliminar</button>
+                                <button type="button" id="clearForm" class="button">Limpiar</button>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </div>
+            <div class="table_component" role="region" tabindex="0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="libros-container">
+                    </tbody>
+                </table>
+            </div>
 
-            <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" />
-
+            <!-- <img src="../img/personaleyendo.jpg" alt="Foto de libro, banner de la web" class="adminImg" /> -->
         </section>
-
     </main>
+
     <footer>
         <div class="footer">
             <a href="../pages/admin.html" class="linkLogo logoFooter">
@@ -97,6 +127,7 @@
         </div>
     </footer>
     <script src="../js/buscarLibroAdmin.js" type="module"></script>
+    <script src="../js/update.js" type="module"></script>
     <script src="../js/delete.js" type="module"></script>
     <script src="../js/logout.js"></script>
 </body>

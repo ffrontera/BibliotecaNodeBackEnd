@@ -1,5 +1,9 @@
 import { index,
-    show,
+    showByTitle,
+    showByAuthor,
+    showByISBN,
+    showById,
+    showByGender,
     store,
     update,
     destroy } from '../controllers/books.controller.js';
@@ -39,7 +43,11 @@ const upload = multer({
 });
 
 booksRouter.get('/', index);
-booksRouter.get('/:titulo', show);
+booksRouter.get('/:titulo', showByTitle);
+booksRouter.get('/id/:idSearch', showById);
+booksRouter.get('/gender/:gender', showByGender);
+booksRouter.get('/ISBN/:ISBN', showByISBN);
+booksRouter.get('/author/:author', showByAuthor);
 booksRouter.post('/', middleware, upload.single('tapa'), store);
 booksRouter.put('/:id', middleware, upload.single('tapa'), update);
 booksRouter.delete('/:id', middleware, destroy);

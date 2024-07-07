@@ -1,13 +1,13 @@
-const form = document.querySelector('#delete');
+const delButtom = document.querySelector('#delButtom');
 
-form.addEventListener('submit', async (e) => {
+delButtom.addEventListener('click', async (e) => {
   e.preventDefault();
   try {
     const response = await fetch(`../../books/${sessionStorage.getItem('id')}`, {
       method: 'DELETE',
       headers: {
         contentType: 'application/json',
-        'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`
      },
     });
 
@@ -21,7 +21,7 @@ form.addEventListener('submit', async (e) => {
     responseDiv.innerHTML = '<p>Libro eliminado con éxito</p>';
     responseDiv.style.display = 'block';
 
-    document.getElementById('title').value = '';
+    document.getElementById('titulo').value = '';
 
   } catch (error) {
     console.error(error);

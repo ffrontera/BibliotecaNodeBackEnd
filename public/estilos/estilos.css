@@ -1101,7 +1101,7 @@ footer {
 
 .adminMenu {
   padding: 20px;
-  width: 50%;
+  width: 100%;
   height: 70%;
   background-color: #fafafa;
   border-radius: 20px;
@@ -1130,11 +1130,16 @@ footer {
   color: #fff;
   border-radius: 20px;
   padding: 10px;
-  width: 25%;
+  width: 50%;
 }
 
 .adminImg {
-  width: 50%;
+  max-width: 50%;
+  max-height: 340px;
+}
+
+#tapaLibroPrevisializacion {
+  display: none;
 }
 
 .adminLink {
@@ -1161,6 +1166,10 @@ footer {
   gap: 20px;
 }
 
+.acciones{
+  display: none;
+}
+
 .fila > div {
   display: flex;
   flex-direction: column;
@@ -1175,4 +1184,43 @@ footer {
   height: 36px;
   font-size: 16px;
   resize: none;
+}
+
+.table_component {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.table_component table {
+  border: 1px solid #dededf;
+  height: auto;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+}
+
+.table_component caption {
+  caption-side: top;
+  text-align: left;
+}
+
+.table_component th {
+  border: 1px solid #dededf;
+  background-color: #151515;
+  color: #eee;
+  padding: 5px;
+}
+
+.table_component td {
+  border: 1px solid #dededf;
+  /* background-color: #eee; */
+  color: #151515;
+  padding: 5px;
+}
+
+tbody tr:hover {
+  background-color: #F28729;
 }
