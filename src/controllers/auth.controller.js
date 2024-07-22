@@ -45,8 +45,9 @@ export const login = async (req, res) => {
         });
         res.json({ auth: true, token, message: 'bienvenido ' + user.nombre });
     } catch (error) {
+        return res.status(500).json({ 'message': error });
         if (error) {
-            return res.status(500).json({ 'message': error });
+            
         }
         if (rows.length === 0) {
             return res.status(404).json({ 'message': "User not found" });
