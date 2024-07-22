@@ -35,10 +35,13 @@ const validarIngreso = formIngreso.addEventListener("submit", async (event) => {
         const responseDiv = document.querySelector("#response");
         if (response.ok) {
             sessionStorage.setItem('token', responseData.token)
-            // if (responseData.isAdmin) {
-            // window.location.href = "listado.html";
-            // responseDiv.innerHTML= `<p>Acceso no autorizado para su rol.</p>`;
-            // }
+            console.log(responseData.isAdmin)
+            if (!responseData.isAdmin) {
+                window.location.href = "socio.html";
+                // responseDiv.innerHTML = `<p>Acceso no autorizado para su rol.</p>`;
+            } else {
+                window.location.href = 'admin.html'
+            }
         } else {
             // Mostrar mensaje de error en caso de credenciales inválidas u otro error
             responseDiv.innerHRML = responseData.message; //`<p>${}</p>`;
