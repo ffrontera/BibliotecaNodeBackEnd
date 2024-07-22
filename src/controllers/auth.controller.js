@@ -15,7 +15,7 @@ export const register = async (req, res) => {
         const connection = await pool.getConnection();
         const [rows] = await connection.query(sql, [user]);
         let newUser = await connection.query('select * from users where mail = ?', [mail]);
-        connection.release();
+        // connection.release();
         const token = jwt.sign({ id: newUser.id }, process.env.SECRET_KEY, {
             expiresIn: "1h",
         });
@@ -45,9 +45,8 @@ export const login = async (req, res) => {
         });
         res.json({ auth: true, token, message: 'bienvenido ' + user.nombre });
     } catch (error) {
-        return res.status(500).json({ 'message': error });
         if (error) {
-            
+            return res.status(500).json({ 'message': "Intente mas tarde" });
         }
         if (rows.length === 0) {
             return res.status(404).json({ 'message': "User not found" });
