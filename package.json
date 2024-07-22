@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node --watch index.js"
+    "dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "Melina Ocanto, Anahí Fernandez, Verónica Molinari, Federico Frontera",

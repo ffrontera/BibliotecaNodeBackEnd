@@ -39,7 +39,7 @@
             <div>
                 <div class="navegador">
                     <a href="../pages/admin.html" class="navegadorLink">Inicio</a>
-                    <p class="navegadorActual">/ Modificar-Eliminar Libro</p>
+                    <p class="navegadorActual">/ Nuevo Autor</p>
                 </div>
                 <div class="adminMenu">
                     <form id="update" class="formularioCrearLibro">
@@ -49,37 +49,17 @@
                                     <label for="id">Id</label>
                                     <input type="number" name="id" placeholder="234" id="id">
                                 </div>
-                                <div>
-                                    <label for="ISBN">ISBN</label>
-                                    <input type="number" name="ISBN" id="ISBN" placeholder="934583472384">
-                                </div>
                             </div>
                             <div class="fila">
                                 <div>
-                                    <label for="titulo">Título</label>
-                                    <input type="text" name="titulo" id="titulo" placeholder="principito">
-                                </div>
-                            </div>
-                            <div class="fila">
-                                <div>
-                                    <label for="resumen">Resumen</label>
-                                    <input type="text" name="resumen" id="resumen">
-                                </div>
-                            </div>
-                            <div class="fila">
-                                <div>
-                                    <label for="id_autor">Autor</label> 
-                                    <input type="text" name="id_autor" id="id_autor" placeholder="Antoine">
-                                </div>
-                                <div>
-                                    <label for="genero">Género</label>
-                                    <input type="text" name="genero" id="genero" placeholder="Infantil">
+                                    <label for="nombre">Título</label>
+                                    <input type="text" name="nombre" id="nombre" placeholder="principito">
                                 </div>
                             </div>
                             <div id="response"></div>
                             <br>
                             <div class="fila buscar">
-                                <button type="button" id="searchButton" class="button">Buscar libro</button>
+                                <button type="button" id="searchButton" class="button">Buscar Autor</button>
                             </div>
                             <div class="fila acciones">
                                 <button type="submit" class="button" id="submit">Modificar</button>
@@ -97,8 +77,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Titulo</th>
-                            <th>Autor</th>
+                            <th>Nombre</th>
                         </tr>
                     </thead>
                     <tbody id="libros-container">
@@ -126,9 +105,6 @@
             </div>
         </div>
     </footer>
-    <script src="../js/buscarLibroAdmin.js" type="module"></script>
-    <script src="../js/update.js" type="module"></script>
-    <script src="../js/delete.js" type="module"></script>
     <script src="../js/logout.js"></script>
 </body>
 

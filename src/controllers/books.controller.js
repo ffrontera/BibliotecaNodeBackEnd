@@ -134,7 +134,7 @@ const update = async (req, res) => {
     const { id } = req.params;
     const { titulo, id_autor, genero, resumen, ISBN } = req.body;
     
-    //TODO: hacer busqueda de autor_id desde el nombre para pasar a la query
+    //TODO: hacer busqueda de autor_id desde el nombre para pasar a la query, si no existe agregar autor!
     const sql = "UPDATE libros SET titulo = ?, id_autor = ?, genero = ?, resumen = ?, ISBN = ? WHERE id = ?";
     try {
         const connection = await pool.getConnection();
