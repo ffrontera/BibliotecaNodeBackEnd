@@ -1,12 +1,12 @@
 import pool from "../db/db.js";
 
 const showLoan = async (req, res) => {
-    if(!req.isAdmin) {
-        return res.status(403).json({ message: 'No tiene autorizacion para realizar esta tarea ' });
-    }
+    // if(!req.isAdmin) {
+    //     return res.status(403).json({ message: 'No tiene autorizacion para realizar esta tarea ' });
+    // }
     const { idPartner } = req.params;
 
-    const sql = 'SELECT * FROM prestamos WHERE socio_id = ?';
+    const sql = 'SELECT p.id, p.socio_id, p.id_ejemplar, p.fecha_inicio, p.fecha_fin, p.concluido, p.fecha_devolucion, l.tapa FROM prestamos p JOIN ejemplares e ON p.id_ejemplar = e.id JOIN libros l ON e.id_libro = l.id WHERE socio_id = ? ORDER BY id DESC';
 
     try {
         const connection = await pool.getConnection();
