@@ -3,8 +3,8 @@ const fileImgTapa = document.querySelector("#tapa"),
     imgBanner = document.querySelector('#imagenLibroNull'),
     divPrestamo = document.querySelector('#prestamoActivo'),
     parrafoDetalle = document.querySelector('#detallePrestamo');
-
-fetch('../../loans/1', {
+let userId = sessionStorage.getItem('userId');
+fetch(`../../loans/${userId}`, {
     headers: { Authorization: ('Bearer ', sessionStorage.getItem('token')) }
 })
     .then((response) => response.json())
