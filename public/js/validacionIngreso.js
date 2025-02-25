@@ -34,8 +34,8 @@ const validarIngreso = formIngreso.addEventListener("submit", async (event) => {
         const responseData = await response.json();
         const responseDiv = document.querySelector("#response");
         if (response.ok) {
-            sessionStorage.setItem('token', responseData.token)
-            console.log(responseData.isAdmin)
+            sessionStorage.setItem('token', responseData.token);
+            sessionStorage.setItem('userId', responseData.id);
             if (!responseData.isAdmin) {
                 window.location.href = "socio.html";
                 // responseDiv.innerHTML = `<p>Acceso no autorizado para su rol.</p>`;
@@ -104,7 +104,9 @@ const validarRegistro = formRegistro.addEventListener("submit", async (event) =>
         const responseData = response.json();
         console.log(responseData);
         if (response.ok) {
-            window.location.href = "listado.html";
+            sessionStorage.setItem('token', responseData.token);
+            sessionStorage.setItem('userId', responseData.id);
+            window.location.href = "socio.html";
         } else {
             const responseDiv = document.querySelector("#response");
             responseDiv.innerHTML = `<p>${responseData.message}</p>`;

@@ -19,7 +19,7 @@ export const register = async (req, res) => {
         const token = jwt.sign({ id: newUser.id }, process.env.SECRET_KEY, {
             expiresIn: "1h",
         });
-        res.status(201).json({ auth: true, token, message: 'bienvenido ' + user.nombre , });
+        res.status(201).json({ auth: true, token, message: 'bienvenido ' + user.nombre, isAdmin: user.rol === "admin", id: user.id });
     } catch (error) {
         if (error.errno == 1062)
             res.status(400).json({ message: 'Error, el e-mail ya se encuentra registrado' });
@@ -43,7 +43,8 @@ export const login = async (req, res) => {
         const token = jwt.sign({ id: user.id, admin: user.rol === 'admin' }, process.env.SECRET_KEY, {
             expiresIn: "1h",
         });
-        res.json({ auth: true, token, message: 'bienvenido ' + user.nombre, isAdmin: user.rol === "admin" });
+        let id = user.id;
+        res.json({ auth: true, token, message: 'bienvenido ' + user.nombre, isAdmin: user.rol === "admin", id: id });
     } catch (error) {
         if (error) {
             return res.status(500).json({ 'message': "Intente mas tarde" });
